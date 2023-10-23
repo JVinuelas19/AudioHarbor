@@ -1,0 +1,658 @@
+{
+    "path": "",
+    "clientId": "36deb911d96244089f69d9ee9b986b47",
+    "clientSecret": "21f2f59110fd423d97b99eef11d062f8",
+    "chosenLanguage": "",
+    "languages": [
+        {
+            "english": [
+                {
+                    "languageWindow": [
+                        {
+                            "messageBoxTitle": "Language selected"
+                        },
+                        {
+                            "messageBoxText": "English selected. You can change this option in the configuration menu."
+                        }
+                    ]
+                },
+                {
+                    "pathStoreWindow": [
+                        {
+                            "messageBoxTitle": "Store path"
+                        },
+                        {
+                            "messageBoxText": "Please select your path to store AudioHarbor files:"
+                        }
+                    ]
+                },
+                {
+                    "mainMenu": [
+                        {
+                            "button1": "YOUTUBE SONG"
+                        },
+                        {
+                            "button2": "YOUTUBE PLAYLIST"
+                        },
+                        {
+                            "button3": "SPOTIFY PLAYLIST"
+                        },
+                        {
+                            "button4": "CONFIGURATION"
+                        },
+                        {
+                            "button5": "ABOUT ME"
+                        }
+                    ]
+                },
+                {
+                    "songWindow": [
+                        {
+                            "windowTitle": "Youtube song"
+                        },
+                        {
+                            "mainLabel": "Enter a YouTube song URL"
+                        },
+                        {
+                            "button": "Download"
+                        },
+                        {
+                            "errorLabel": "URL is not valid."
+                        }
+                    ]
+                },
+                {
+                    "ytPlaylistWindow": [
+                        {
+                            "windowTitle": "Youtube playlist"
+                        },
+                        {
+                            "mainLabel": "Enter a YouTube Playlist URL"
+                        },
+                        {
+                            "button": "Download"
+                        },
+                        {
+                            "errorLabel": "URL is not valid."
+                        }
+                    ]
+                },
+                {
+                    "spotifyPlaylistWindow": [
+                        {
+                            "windowTitle": "Spotify playlist"
+                        },
+                        {
+                            "mainLabel": "Enter a Spotify username"
+                        },
+                        {
+                            "button": "Check playlists"
+                        },
+                        {
+                            "errorLabel": "Username is not valid."
+                        }
+                    ]
+                },
+                {
+                    "pickPlaylistWindow": [
+                        {
+                            "windowTitle": "Pick a playlist"
+                        },
+                        {
+                            "mainLabel": "Pick a playlist"
+                        },
+                        {
+                            "button": "Download"
+                        }
+                    ]
+                },
+                {
+                    "configWindow": [
+                        {
+                            "windowTitle": "Configuration"
+                        },
+                        {
+                            "mainLabel": "Configuration options"
+                        },
+                        {
+                            "button1": "Change path store"
+                        },
+                        {
+                            "button2": "Choose language"
+                        }
+                    ]
+                },
+                {
+                    "aboutMeWindow": [
+                        {
+                            "windowTitle": "About me"
+                        },
+                        {
+                            "mainLabel": "My name is Juan (@JVinuelas19) and i'm a Python developer!\nCheck out my socials and contact me if you wish to.\n#KeepCoding!"
+                        },
+                        {
+                            "button1": "GitHub"
+                        },
+                        {
+                            "button2": "Personal Twitter"
+                        },
+                        {
+                            "button3": "Ornithob0t Project"
+                        },
+                        {
+                            "button4": "Instagram"
+                        },
+                        {
+                            "button5": "Paypal"
+                        }
+                    ]
+                },
+                {
+                    "dialogs": [
+                        {
+                            "dialog1": "Your song is ready!"
+                        },
+                        {
+                            "dialog2": "Your playlist is ready!"
+                        },
+                        {
+                            "dialog3": "Choose where you want to store the audio:"
+                        },
+                        {
+                            "dialog4": "App closure"
+                        },
+                        {
+                            "dialog5": "The app will close to apply the new settings"
+                        }
+                    ]
+                }
+            ],
+            "spanish": [
+                {
+                    "languageWindow": [
+                        {
+                            "messageBoxTitle": "Idioma seleccionado"
+                        },
+                        {
+                            "messageBoxText": "El idioma seleccionado es 'Espa\u00f1ol'.\nPuedes cambiarlo m\u00e1s tarde en el men\u00fa de configuraci\u00f3n"
+                        }
+                    ]
+                },
+                {
+                    "pathStoreWindow": [
+                        {
+                            "messageBoxTitle": "Ruta de almacenamiento"
+                        },
+                        {
+                            "messageBoxText": "Por favor selecciona d\u00f3nde quieres guardar los archivos de audio:"
+                        }
+                    ]
+                },
+                {
+                    "mainMenu": [
+                        {
+                            "button1": "CANCION DE YOUTUBE"
+                        },
+                        {
+                            "button2": "PLAYLIST DE YOUTUBE"
+                        },
+                        {
+                            "button3": "PLAYLIST DE SPOTIFY"
+                        },
+                        {
+                            "button4": "CONFIGURACION"
+                        },
+                        {
+                            "button5": "SOBRE MI"
+                        }
+                    ]
+                },
+                {
+                    "songWindow": [
+                        {
+                            "windowTitle": "Cancion de YouTube"
+                        },
+                        {
+                            "mainLabel": "Introduce la URL de la cancion"
+                        },
+                        {
+                            "button": "Descargar"
+                        },
+                        {
+                            "errorLabel": "URL no valida."
+                        }
+                    ]
+                },
+                {
+                    "ytPlaylistWindow": [
+                        {
+                            "windowTitle": "Playlist de YouTube"
+                        },
+                        {
+                            "mainLabel": "Introduce la URL de la playlist"
+                        },
+                        {
+                            "button": "Descargar"
+                        },
+                        {
+                            "errorLabel": "URL no valida."
+                        }
+                    ]
+                },
+                {
+                    "spotifyPlaylistWindow": [
+                        {
+                            "windowTitle": "Playlist de Spotify"
+                        },
+                        {
+                            "mainLabel": "Introduce el usuario de Spotify"
+                        },
+                        {
+                            "button": "Mostrar listas"
+                        },
+                        {
+                            "errorLabel": "Nombre de usuario no valido."
+                        }
+                    ]
+                },
+                {
+                    "pickPlaylistWindow": [
+                        {
+                            "windowTitle": "Selecciona una lista"
+                        },
+                        {
+                            "mainLabel": "Selecciona una lista"
+                        },
+                        {
+                            "button": "Descargar"
+                        }
+                    ]
+                },
+                {
+                    "configWindow": [
+                        {
+                            "windowTitle": "Configuracion"
+                        },
+                        {
+                            "mainLabel": "Opciones de configuracion"
+                        },
+                        {
+                            "button1": "Cambiar ruta de almacenamiento"
+                        },
+                        {
+                            "button2": "Seleccionar idioma"
+                        }
+                    ]
+                },
+                {
+                    "aboutMeWindow": [
+                        {
+                            "windowTitle": "Sobre mi"
+                        },
+                        {
+                            "mainLabel": "Soy Juanan (@JVinuelas19) y soy desarrollador Python!\nAqui tienes mis redes por si quieres contactar conmigo.\n#KeepCoding!"
+                        },
+                        {
+                            "button1": "GitHub"
+                        },
+                        {
+                            "button2": "Twitter personal"
+                        },
+                        {
+                            "button3": "Proyecto Ornithob0t"
+                        },
+                        {
+                            "button4": "Instagram"
+                        },
+                        {
+                            "button5": "Paypal"
+                        }
+                    ]
+                },
+                {
+                    "dialogs": [
+                        {
+                            "dialog1": "\u00a1Tu canci\u00f3n est\u00e1 lista!"
+                        },
+                        {
+                            "dialog2": "\u00a1Tu playlist est\u00e1 lista!"
+                        },
+                        {
+                            "dialog3": "Selecciona donde quieres guardar los audios:"
+                        },
+                        {
+                            "dialog4": "Cierre de la aplicaci\u00f3n"
+                        },
+                        {
+                            "dialog5": "La aplicaci\u00f3n se cerrar\u00e1 para aplicar los cambios"
+                        }
+                    ]
+                }
+            ],
+            "german": [
+                {
+                    "languageWindow": [
+                        {
+                            "messageBoxTitle": "Sprache ausgew\u00e4hlt"
+                        },
+                        {
+                            "messageBoxText": "Deutsch ausgew\u00e4hlt. Sie k\u00f6nnen diese Option im Konfigurationsmen\u00fc \u00e4ndern."
+                        }
+                    ]
+                },
+                {
+                    "pathStoreWindow": [
+                        {
+                            "messageBoxTitle": "Speicherpfad"
+                        },
+                        {
+                            "messageBoxText": "Bitte w\u00e4hlen Sie Ihren Pfad zum Speichern von AudioHarbor-Dateien aus:"
+                        }
+                    ]
+                },
+                {
+                    "mainMenu": [
+                        {
+                            "button1": "YOUTUBE SONG"
+                        },
+                        {
+                            "button2": "YOUTUBE PLAYLIST"
+                        },
+                        {
+                            "button3": "SPOTIFY PLAYLIST"
+                        },
+                        {
+                            "button4": "KONFIGURATION"
+                        },
+                        {
+                            "button5": "\u00dcBER MICH"
+                        }
+                    ]
+                },
+                {
+                    "songWindow": [
+                        {
+                            "windowTitle": "Youtube-Song"
+                        },
+                        {
+                            "mainLabel": "Geben Sie eine URL f\u00fcr einen YouTube-Song ein"
+                        },
+                        {
+                            "button": "Herunterladen"
+                        },
+                        {
+                            "errorLabel": "URL ist ung\u00fcltig."
+                        }
+                    ]
+                },
+                {
+                    "ytPlaylistWindow": [
+                        {
+                            "windowTitle": "YouTube-Playlist"
+                        },
+                        {
+                            "mainLabel": "Geben Sie eine URL f\u00fcr eine YouTube-Playlist ein"
+                        },
+                        {
+                            "button": "Herunterladen"
+                        },
+                        {
+                            "errorLabel": "URL ist ung\u00fcltig."
+                        }
+                    ]
+                },
+                {
+                    "spotifyPlaylistWindow": [
+                        {
+                            "windowTitle": "Spotify-Playlist"
+                        },
+                        {
+                            "mainLabel": "Geben Sie einen Spotify-Benutzernamen ein"
+                        },
+                        {
+                            "button": "Wiedergabelisten \u00fcberpr\u00fcfen"
+                        },
+                        {
+                            "errorLabel": "Benutzername ist ung\u00fcltig."
+                        }
+                    ]
+                },
+                {
+                    "pickPlaylistWindow": [
+                        {
+                            "windowTitle": "W\u00e4hlen Sie eine Playlist aus"
+                        },
+                        {
+                            "mainLabel": "W\u00e4hlen Sie eine Playlist aus"
+                        },
+                        {
+                            "button": "Herunterladen"
+                        }
+                    ]
+                },
+                {
+                    "configWindow": [
+                        {
+                            "windowTitle": "Konfiguration"
+                        },
+                        {
+                            "mainLabel": "Konfigurationsoptionen"
+                        },
+                        {
+                            "button1": "Speicherpfad \u00e4ndern"
+                        },
+                        {
+                            "button2": "Sprache ausw\u00e4hlen"
+                        }
+                    ]
+                },
+                {
+                    "aboutMeWindow": [
+                        {
+                            "windowTitle": "\u00dcber mich"
+                        },
+                        {
+                            "mainLabel": "Mein Name ist Juan (@JVinuelas19), und ich bin ein Python-Entwickler!\nBesuchen Sie meine Social-Media-Profile und kontaktieren Sie mich, wenn Sie m\u00f6chten.\n#KeepCoding!"
+                        },
+                        {
+                            "button1": "GitHub"
+                        },
+                        {
+                            "button2": "Pers\u00f6nlicher Twitter"
+                        },
+                        {
+                            "button3": "Ornithob0t-Projekt"
+                        },
+                        {
+                            "button4": "Instagram"
+                        },
+                        {
+                            "button5": "Paypal"
+                        }
+                    ]
+                },
+                {
+                    "dialogs": [
+                        {
+                            "dialog1": "Ihr Song ist bereit!"
+                        },
+                        {
+                            "dialog2": "Ihre Wiedergabeliste ist bereit!"
+                        },
+                        {
+                            "dialog3": "W\u00e4hlen Sie aus, wo Sie die Audiodateien speichern m\u00f6chten:"
+                        },
+                        {
+                            "dialog4": "Beendigung der App"
+                        },
+                        {
+                            "dialog5": "Die App wird geschlossen, um die neuen Einstellungen anzuwenden"
+                        }
+                    ]
+                }
+            ],
+            "italian": [
+                {
+                    "languageWindow": [
+                        {
+                            "messageBoxTitle": "Lingua selezionata"
+                        },
+                        {
+                            "messageBoxText": "Italiano selezionato. \u00c8 possibile modificare questa opzione nel menu di configurazione."
+                        }
+                    ]
+                },
+                {
+                    "pathStoreWindow": [
+                        {
+                            "messageBoxTitle": "Percorso di archiviazione"
+                        },
+                        {
+                            "messageBoxText": "Selezionare il percorso di archiviazione dei file di AudioHarbor:"
+                        }
+                    ]
+                },
+                {
+                    "mainMenu": [
+                        {
+                            "button1": "CANZONE YOUTUBE"
+                        },
+                        {
+                            "button2": "PLAYLIST YOUTUBE"
+                        },
+                        {
+                            "button3": "PLAYLIST SPOTIFY"
+                        },
+                        {
+                            "button4": "CONFIGURAZIONE"
+                        },
+                        {
+                            "button5": "SU DI ME"
+                        }
+                    ]
+                },
+                {
+                    "songWindow": [
+                        {
+                            "windowTitle": "Canzone YouTube"
+                        },
+                        {
+                            "mainLabel": "Inserisci un URL della canzone di YouTube"
+                        },
+                        {
+                            "button": "Scarica"
+                        },
+                        {
+                            "errorLabel": "URL non valido."
+                        }
+                    ]
+                },
+                {
+                    "ytPlaylistWindow": [
+                        {
+                            "windowTitle": "Playlist YouTube"
+                        },
+                        {
+                            "mainLabel": "Inserisci un URL della playlist di YouTube"
+                        },
+                        {
+                            "button": "Scarica"
+                        },
+                        {
+                            "errorLabel": "URL non valido."
+                        }
+                    ]
+                },
+                {
+                    "spotifyPlaylistWindow": [
+                        {
+                            "windowTitle": "Playlist Spotify"
+                        },
+                        {
+                            "mainLabel": "Inserisci un nome utente Spotify"
+                        },
+                        {
+                            "button": "Controlla le playlist"
+                        },
+                        {
+                            "errorLabel": "Nome utente non valido."
+                        }
+                    ]
+                },
+                {
+                    "pickPlaylistWindow": [
+                        {
+                            "windowTitle": "Scegli una playlist"
+                        },
+                        {
+                            "mainLabel": "Scegli una playlist"
+                        },
+                        {
+                            "button": "Scarica"
+                        }
+                    ]
+                },
+                {
+                    "configWindow": [
+                        {
+                            "windowTitle": "Configurazione"
+                        },
+                        {
+                            "mainLabel": "Opzioni di configurazione"
+                        },
+                        {
+                            "button1": "Cambia percorso di archiviazione"
+                        },
+                        {
+                            "button2": "Scegli la lingua"
+                        }
+                    ]
+                },
+                {
+                    "aboutMeWindow": [
+                        {
+                            "windowTitle": "Su di me"
+                        },
+                        {
+                            "mainLabel": "Il mio nome \u00e8 Juan (@JVinuelas19) e sono un sviluppatore Python!\nVisita i miei profili sui social media e contattami se desideri.\n#KeepCoding!"
+                        },
+                        {
+                            "button1": "GitHub"
+                        },
+                        {
+                            "button2": "Twitter personale"
+                        },
+                        {
+                            "button3": "Progetto Ornithob0t"
+                        },
+                        {
+                            "button4": "Instagram"
+                        },
+                        {
+                            "button5": "Paypal"
+                        }
+                    ]
+                },
+                {
+                    "dialogs": [
+                        {
+                            "dialog1": "La tua canzone \u00e8 pronta!"
+                        },
+                        {
+                            "dialog2": "La tua playlist \u00e8 pronta!"
+                        },
+                        {
+                            "dialog3": "Scegli dove desideri archiviare l'audio:"
+                        },
+                        {
+                            "dialog4": "Chiusura dell'applicazione"
+                        },
+                        {
+                            "dialog5": "L'applicazione verr\u00e0 chiusa per applicare le nuove impostazioni"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
