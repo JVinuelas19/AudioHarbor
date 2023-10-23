@@ -104,7 +104,7 @@ def get_spotify_token():
     try:
         url = "https://accounts.spotify.com/api/token"
         headers = {"Content-Type" : "application/x-www-form-urlencoded"}
-        data = f"grant_type=client_credentials&client_id=36deb911d96244089f69d9ee9b986b47&client_secret=21f2f59110fd423d97b99eef11d062f8"
+        data = f"grant_type=client_credentials&client_id=&client_secret="
         r = requests.post(url, headers = headers, data = data)
         json_token = json.loads(r.text)
         return json_token['access_token']
