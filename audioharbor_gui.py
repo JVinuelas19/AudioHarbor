@@ -13,9 +13,6 @@ import threading
 import json
 import os
 
-#######THINGS TO DO
-#CREATE THE EXECUTABLE. ANTIVIRUS STUFF? 
-
 ################################################################   AUXILIARY FUNCTIONS   #########################################################################
 
 #Creates a Window with a name and a geometry
@@ -70,9 +67,9 @@ def save_config(config):
 #Sets the store path. If it's empty will ask the user to choose it. Otherwise will take it from config.json
 def set_store_path(config):
     if config['path'] == "":
-        print(lang_package[1][0]['messageBoxTitle'])
-        print(lang_package[1][1]['messageBoxText'])
-        messagebox.showinfo(title=lang_package[1][0]['messageBoxTitle'], message=lang_package[1][1]['messageBoxText'])
+        print(lang_package[1][0])
+        print(lang_package[1][1])
+        messagebox.showinfo(title=lang_package[1][0], message=lang_package[1][1])
         store_path = filedialog.askdirectory(initialdir="/")
         config['path'] = store_path
         with open(os.path.join(config_file_path), 'w', encoding="utf-8") as config_file:
@@ -101,9 +98,9 @@ def change_language(needs_reset):
         lang_package = lang.get_lang_package(language)
         frame.destroy()
         if not needs_reset:
-            messagebox.showinfo(title=lang_package[0][0]['messageBoxTitle'], message=lang_package[0][1]['messageBoxText'])
+            messagebox.showinfo(title=lang_package[0][0], message=lang_package[0][1])
         else:
-            messagebox.showinfo(title=lang_package[9][3]['dialog4'], message=lang_package[9][4]['dialog5'])
+            messagebox.showinfo(title=lang_package[9][3], message=lang_package[9][4])
             root.destroy()
     frame = Tk(className='Language')
     frame.geometry(AUXILIAR_WINDOW_GEOMETRY)
@@ -111,14 +108,21 @@ def change_language(needs_reset):
     main_frame = tk.Frame(frame)
     main_frame.configure(background="#56CBF9")
     main_frame.columnconfigure(COLUMN_CONFIG, weight=1)
-    main_frame.rowconfigure([0,1], weight=1)
+    main_frame.rowconfigure([0,1,2], weight=1)
     main_frame.pack(fill=tk.BOTH, expand = True)
+    if needs_reset is False:
+        header_text = "Choose your language"
+    else:
+        header_text = lang_package[7][3]
+    header_label = tk.Label(main_frame, text=header_text, background="#56CBF9", font=("ACETONE", 26))
+    header_label.grid(column=1, row=0)
     combobox = ttk.Combobox(main_frame, state="readonly", values=['English', 'Español', 'Deutsch', 'Italian'], width=30, height=10, takefocus=0)
     combobox.current(0)
-    combobox.grid(column=1,row=0)
-    button = tk.Button(main_frame, cursor='hand2', background="#80bc00", width=20, height=1, activebackground="#ff0000", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text='OK', command = select_language)
-    button.grid(column = 1, row = 1, padx=25)
+    combobox.grid(column=1,row=1)
+    button = tk.Button(main_frame, cursor='hand2', background="#80bc00", width=20, height=1, activebackground="#000000", 
+                    activeforeground="#80bc00", font=("ACETONE", 18),  text='OK', command = select_language)
+    button.bind('<Button-1>', on_click)
+    button.grid(column = 1, row = 2, padx=25)
     frame.mainloop()     
 
 #Sets the chosen language from the json config file. If it's empty will ask the user to choose one.
@@ -155,10 +159,10 @@ def service_button(url, service, user, window, root):
         #Thread set up
         if service==1:
             download_thread = threading.Thread(target=download, args=(1,))
-            txt=lang_package[9][0]['dialog1']
+            txt=lang_package[9][0]
         elif service==2:
             download_thread = threading.Thread(target=download, args=(2,))
-            txt=lang_package[9][1]['dialog2']
+            txt=lang_package[9][1]
         else:
             download_thread = threading.Thread(target=download, args=(3,))
         #Running the thread
@@ -173,13 +177,13 @@ def service_button(url, service, user, window, root):
     #Error management
     except:
         if service == 1:
-            label = tk.Label(window, text=lang_package[3][3]['errorLabel'], background="#fe2400", font=("ACETONE", 14))
+            label = tk.Label(window, text=lang_package[3][3], background="#fe2400", font=("ACETONE", 14))
             label.place(x=87, y=290)
         elif service == 2:
-            label = tk.Label(window, text=lang_package[4][3]['errorLabel'], background="#fea500", font=("ACETONE", 14))
+            label = tk.Label(window, text=lang_package[4][3], background="#fea500", font=("ACETONE", 14))
             label.place(x=87, y=290)
         elif service == 3:
-            label = tk.Label(window, text=lang_package[5][3]['errorLabel'], background="#00a86b", font=("ACETONE", 14))
+            label = tk.Label(window, text=lang_package[5][3], background="#00a86b", font=("ACETONE", 14))
             label.place(x=87, y=290)
         else:
             print("External error.")
@@ -189,7 +193,7 @@ def service_button(url, service, user, window, root):
 #Creates the "YT song" window
 def yt_song_window():
     #Window layout
-    root = Window(lang_package[3][0]['windowTitle'])
+    root = Window(lang_package[3][0])
     root.bind("<Destroy>", on_destroy)
     root.resizable(False, False)
     play_music(True)
@@ -204,14 +208,14 @@ def yt_song_window():
     label1.image = bg_image
     label1.place(x=-2, y=0)
     #Url label
-    url_label = tk.Label(window, text=lang_package[3][1]['mainLabel'], background="#fe2400", font=("ACETONE", 26))
+    url_label = tk.Label(window, text=lang_package[3][1], background="#fe2400", font=("ACETONE", 26))
     url_label.grid(column=1, row=0)
     #Text box
     textbox = tk.Text(window, font=("ACETONE", 18), width=30, height=2)
     textbox.grid(column=1, row=1)
     #Download button
     button1 = tk.Button(window, cursor='hand2', background="#ffffff", width=20, height=1, activebackground="#000000", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[3][2]['button'], 
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[3][2], 
                     command = lambda:(service_button(textbox.get("1.0", "end-1c"), service=1, user=None, window=window, root=root)))
     button1.grid(column=1, row=2)
     button1.bind("<Button-1>", on_click)
@@ -219,7 +223,7 @@ def yt_song_window():
 #Creates the "YT playlist" window
 def yt_playlist_window():
     #Window layout
-    root = Window(lang_package[4][0]['windowTitle'])
+    root = Window(lang_package[4][0])
     root.bind("<Destroy>", on_destroy)
     root.resizable(False, False)
     play_music(True)
@@ -234,14 +238,14 @@ def yt_playlist_window():
     label1.image = bg_image
     label1.place(x=-2, y=0)
     #Label
-    url_label = tk.Label(window, background="#fea500" , text=lang_package[4][1]['mainLabel'], font=("ACETONE", 26))
+    url_label = tk.Label(window, background="#fea500" , text=lang_package[4][1], font=("ACETONE", 26))
     url_label.grid(column=1, row=0)
     #Text box
     textbox = tk.Text(window, font=("ACETONE", 18), width=30, height=2)
     textbox.grid(column=1, row=1)
     #Download button
     button1 = tk.Button(window, cursor='hand2', background="#ffffff", width=20, height=1, activebackground="#000000", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[4][2]['button'], 
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[4][2], 
                     command = lambda:(service_button(textbox.get("1.0", "end-1c"), service=2, user=None, window=window, root=root)))
     button1.grid(column=1, row=2)
     button1.bind("<Button-1>", on_click)
@@ -249,7 +253,7 @@ def yt_playlist_window():
 #Creates the "Spotify playlist" window
 def spotify_window():
     #Window layout
-    root = Window(lang_package[5][0]['windowTitle'])
+    root = Window(lang_package[5][0])
     root.bind("<Destroy>", on_destroy)
     root.resizable(False, False)
     play_music(True)
@@ -264,14 +268,14 @@ def spotify_window():
     label1.image = bg_image
     label1.place(x=-2, y=0)
     #Username label
-    url_label = tk.Label(window, background="#00a86b", text=lang_package[5][1]['mainLabel'], font=("ACETONE", 26))
+    url_label = tk.Label(window, background="#00a86b", text=lang_package[5][1], font=("ACETONE", 26))
     url_label.grid(column=1, row=0)
     #Text box
     textbox = tk.Text(window, font=("ACETONE", 18), width=30, height=2)
     textbox.grid(column=1, row=1)
     #Button
     button1 = tk.Button(window, cursor='hand2', background="#ffffff", width=20, height=1, activebackground="#000000", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[5][2]['button'], 
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[5][2], 
                     command = lambda:(service_button(None, service=3, user=textbox.get("1.0", "end-1c"), window=window, root=root)))
     button1.grid(column=1, row=2)
     button1.bind("<Button-1>", on_click)
@@ -300,10 +304,10 @@ def pick_playlist(playlists, token, root):
         cbar.destroy()
         frame.destroy()
         root.destroy()
-        messagebox.showinfo(message=lang_package[9][1]['dialog2'])
+        messagebox.showinfo(message=lang_package[9][1])
 
     #Window layout
-    frame = Window(lang_package[6][0]['windowTitle'])
+    frame = Window(lang_package[6][0])
     frame.bind("<Destroy>", on_destroy)
     frame.resizable(False, False)
     window = tk.Frame(frame, bg="white")
@@ -317,7 +321,7 @@ def pick_playlist(playlists, token, root):
     label1.image = bg_image
     label1.place(x=-2, y=0)
     #Url label
-    url_label = tk.Label(window, text=lang_package[6][1]['mainLabel'], background="#00a86b" ,font=("ACETONE", 26))
+    url_label = tk.Label(window, text=lang_package[6][1], background="#00a86b" ,font=("ACETONE", 26))
     url_label.config(padx=-10)
     url_label.grid(column=1, row=0)
     #Combobox
@@ -329,13 +333,13 @@ def pick_playlist(playlists, token, root):
     combobox.place(x=131, y=150)
     #Download Button
     button1 = tk.Button(window, cursor='hand2', background="#ffffff", width=20, height=1, activebackground="#000000", 
-                        activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[6][2]['button'], command = start_thread)
+                        activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[6][2], command = start_thread)
     button1.grid(column=1, row=2)    
     button1.bind("<Button-1>", on_click)
 
 #Creates the "Configuration" window
 def config_window():
-    root = Window(lang_package[7][0]['windowTitle'])
+    root = Window(lang_package[7][0])
     root.bind("<Destroy>", on_destroy)
     root.resizable(False, False)
     play_music(True)
@@ -350,22 +354,22 @@ def config_window():
     label1.image = bg_image
     label1.place(x=-2, y=0)
 
-    url_label = tk.Label(window, text=lang_package[7][1]['mainLabel'], background="#008b8a", font=("ACETONE", 26))
+    url_label = tk.Label(window, text=lang_package[7][1], background="#008b8a", font=("ACETONE", 26))
     url_label.grid(column=1, row=0)
     #Button
     button1 = tk.Button(window, cursor='hand2', background="#ffffff", width=35, height=1, activebackground="#000000", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[7][2]['button1'], command=select_path)
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[7][2], command=select_path)
     button1.grid(column=1, row=1)
     button1.bind("<Button-1>", on_click)
     button2 = tk.Button(window, cursor='hand2', background="#ffffff", width=35, height=1, activebackground="#000000", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[7][3]['button2'], command=lambda:change_language(needs_reset=True))
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[7][3], command=lambda:change_language(needs_reset=True))
     button2.grid(column=1, row=2)
     button2.bind("<Button-1>", on_click)
 
 #Creates the "About me" window
 def about_me_window():
     #Window set up
-    root = Window(lang_package[8][0]['windowTitle'])
+    root = Window(lang_package[8][0])
     root.resizable(False, False)
     root.bind("<Destroy>", on_destroy)
     play_music(True)
@@ -380,25 +384,25 @@ def about_me_window():
     label1.image = bg_image
     label1.place(x=-2, y=0)
     #Text header
-    url_label = tk.Label(window, text=lang_package[8][0]['windowTitle'], background="#01ced1", font=("ACETONE", 26))
+    url_label = tk.Label(window, text=lang_package[8][0], background="#01ced1", font=("ACETONE", 26))
     url_label.grid(column=1, row=0)
-    info_label = tk.Label(window, text=lang_package[8][1]['mainLabel'], background="#01ced1", font=("ACETONE", 16))
+    info_label = tk.Label(window, text=lang_package[8][1], background="#01ced1", font=("ACETONE", 16))
     info_label.grid(column=1, row=1)
     #Social Buttons configuration
     github_button = tk.Button(window, cursor='hand2', background="#ffffff", width=25, height=1, activebackground="#8c8787", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][2]['button1'],
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][2],
                     command=lambda:webbrowser.open("https://github.com/JVinuelas19"))
     twitter_button1 = tk.Button(window, cursor='hand2', background="#ffffff", width=25, height=1, activebackground="#0fdefd", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][3]['button2'],
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][3],
                     command=lambda:webbrowser.open("https://twitter.com/JVinuelas19"))
     twitter_button2 = tk.Button(window, cursor='hand2', background="#ffffff", width=25, height=1, activebackground="#7fc31e", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][4]['button3'],
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][4],
                     command=lambda:webbrowser.open("https://twitter.com/Ornithob0t"))
     instagram_button = tk.Button(window, cursor='hand2', background="#ffffff", width=25, height=1, activebackground="#eea8ea", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][5]['button4'], 
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][5], 
                     command=lambda:webbrowser.open("https://www.instagram.com/jvinuelas19/"))
     paypal_button = tk.Button(window, cursor='hand2', background="#ffffff", width=25, height=1, activebackground="#1053fa", 
-                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][6]['button5'], 
+                    activeforeground="#ffffff", font=("ACETONE", 18),  text=lang_package[8][6], 
                     command=lambda:webbrowser.open("https://www.paypal.com/donate/?hosted_button_id=7QSS3APP4TSGE"))
     
     buttons = [github_button, twitter_button1, twitter_button2, instagram_button, paypal_button]
@@ -431,15 +435,15 @@ def main():
     #Buttons
 
     button1 = tk.Button(main_frame, cursor='hand2', background="#ff0000", width=20, height=1, activebackground="#ff0000", 
-                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][0]['button1'], command = yt_song_window)
+                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][0], command = yt_song_window)
     button2 = tk.Button(main_frame, cursor='hand2', background="#ffa300", width=20, height=1, activebackground="#ffa300", 
-                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][1]['button2'], command = yt_playlist_window)
+                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][1], command = yt_playlist_window)
     button3 = tk.Button(main_frame, cursor='hand2', background="#00bc66", width=20, height=1, activebackground="#00bc66", 
-                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][2]['button3'], command = spotify_window)
+                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][2], command = spotify_window)
     button4 = tk.Button(main_frame, cursor='hand2', background="#009b8d", width=20, height=1, activebackground="#009b8d", 
-                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][3]['button4'], command = config_window)
+                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][3], command = config_window)
     button5 = tk.Button(main_frame, cursor='hand2', background="#02b3c3", width=20, height=1, activebackground="#02b3c3", 
-                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][4]['button5'], command = about_me_window)
+                        activeforeground="#ffffff", font=("ACETONE", 18), text=lang_package[2][4], command = about_me_window)
 
     buttons = [button1, button2, button3, button4, button5]
     for button in buttons:

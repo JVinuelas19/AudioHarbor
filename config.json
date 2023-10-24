@@ -119,6 +119,9 @@
                         },
                         {
                             "button2": "Choose language"
+                        },
+                        {
+                            "languageHeader": "Choose your language"
                         }
                     ]
                 },
@@ -281,6 +284,9 @@
                         },
                         {
                             "button2": "Seleccionar idioma"
+                        },
+                        {
+                            "languageHeader": "Selecciona tu idioma"
                         }
                     ]
                 },
@@ -443,6 +449,9 @@
                         },
                         {
                             "button2": "Sprache ausw\u00e4hlen"
+                        },
+                        {
+                            "languageHeader": "W\u00e4hlen Sie Ihre Sprache"
                         }
                     ]
                 },
@@ -605,6 +614,9 @@
                         },
                         {
                             "button2": "Scegli la lingua"
+                        },
+                        {
+                            "languageHeader": "Scegli la tua lingua"
                         }
                     ]
                 },
