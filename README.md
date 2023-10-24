@@ -28,6 +28,8 @@ Let's overview the main changes compared to v1.1:
 - A new audioharbor_module.py file to manage the pytube work along with the GUI.
 - A new config.json to store configuration data: store path, Spotify credentials, chosen language and all languages dialogs.
 - YT channel info and request Spotify tokens options has been deleted.
+- Bug fixing: proper pathing implemented, language selection errors resolved, playlists titles with conflictive characters are now parsed into a non-problematic version
 
 Like i said earlier, you need credentials to use the Spotify function. You can get yours here: https://developer.spotify.com/documentation/web-api
+Please read the README.txt included with the installer before booting up AudioHarbor. 
 This code has educational purposes only.
