@@ -2,7 +2,7 @@
 
 Hello user, important stuff before booting AudioHarbor:
 
-First of all, install the ACETONE font that it's included in this directory. Just click the font and select "Install". Otherwise the interface will look ugly.
+First of all, install the ACETONE font: "https://www.dafont.com/acetone.font". Just download the font, open it and select "Install". Otherwise the interface will look ugly.
 Youtube functions will work from the start but if you want to use the Spotify functions follow these instructions:
 
 1 - Create an Spotify API account here: https://developer.spotify.com/documentation/web-api
@@ -21,7 +21,7 @@ That's all, enjoy!
 
 Hola usuario, cosas importantes antes de arrancar AudioHarbor:
 
-En primer lugar, instale la fuente ACETONE que se incluye en este directorio. Simplemente haz clic en la fuente y selecciona "Instalar". Si no lo haces la interfaz se verá fea.
+En primer lugar, instale la fuente ACETONE: "https://www.dafont.com/acetone.font". Simplemente descarga la fuente, ábrela y selecciona "Instalar". Si no lo haces la interfaz se verá fea.
 Las funciones de Youtube funcionarán desde el principio pero si quieres usar las funciones de Spotify sigue estas instrucciones:
 
 1 - Crea una cuenta en la API de Spotify aquí: https://developer.spotify.com/documentation/web-api
@@ -40,7 +40,8 @@ Eso es todo, ¡que lo disfrutes!
 
 Hallo Benutzer, wichtige Dinge vor dem Start von AudioHarbor:
 
-Installieren Sie zunächst die Schriftart ACETONE, die in diesem Verzeichnis enthalten ist. Klicken Sie einfach auf die Schriftart und wählen Sie "Installieren". Wenn Sie das nicht tun, wird die Oberfläche hässlich aussehen.
+Installieren Sie zunächst die Schriftart ACETONE: "https://www.dafont.com/acetone.font". Laden Sie die Schriftart einfach herunter, öffnen Sie sie und wählen Sie "Installieren".
+Wenn Sie das nicht tun, wird die Oberfläche hässlich aussehen.
 Die Youtube-Funktionen funktionieren sofort, aber wenn Sie die Spotify-Funktionen nutzen möchten, folgen Sie diesen Anweisungen:
 
 1 - Erstellen Sie hier ein Spotify-API-Konto: https://developer.spotify.com/documentation/web-api
@@ -60,7 +61,7 @@ Das ist alles, viel Spaß!
 
 Salve utente, sono importanti le cose da fare prima di avviare AudioHarbor:
 
-Prima di tutto, installare il font ACETONE che è incluso in questa directory. Basta fare clic sul carattere e selezionare "Installa". Se non lo fate, l'interfaccia sarà brutta.
+Prima di tutto, installare il font ACETONE: "https://www.dafont.com/acetone.font". È sufficiente scaricare il font, aprirlo e selezionare "Installa".. Se non lo fate, l'interfaccia sarà brutta.
 Le funzioni di Youtube funzionano subito, ma se volete usare le funzioni di Spotify seguite queste istruzioni:
 
 1 - Creare un account API Spotify qui: https://developer.spotify.com/documentation/web-api
