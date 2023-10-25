@@ -1,5 +1,5 @@
 # AudioHarbor
-An audio downloader made with PyTube and Spotify API! The main idea is to download the audio files from YT or Spotify. Next steps will be creating a cool GUI to simplify its use
+An audio downloader made with PyTube and Spotify API! 
 
 ![AudioHarbor_main](https://github.com/JVinuelas19/AudioHarbor/assets/111135343/4914e3f0-a91e-49d6-a50a-c0c0b78c9da5)
 
