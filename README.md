@@ -1,7 +1,7 @@
 # AudioHarbor
 An audio downloader made with PyTube and Spotify API! The main idea is to download the audio files from YT or Spotify. Next steps will be creating a cool GUI to simplify its use
 
-![AudioHarbor](https://github.com/JVinuelas19/AudioHarbor/assets/111135343/bc78dcaa-790d-47df-a636-f4064d001304)
+![AudioHarbor_main](https://github.com/JVinuelas19/AudioHarbor/assets/111135343/4914e3f0-a91e-49d6-a50a-c0c0b78c9da5)
 
 # Version 1.0
 A quick version of the idea: you can pick a playlist, paste the URL to the program and it will download the playlist to a selected location.
@@ -35,4 +35,5 @@ Let's overview the main changes compared to v1.1:
 Like i said earlier, you need credentials to use the Spotify function. You can get yours here: https://developer.spotify.com/documentation/web-api
 Please read the README.txt included with the installer before booting up AudioHarbor. 
 This code has educational purposes only.
+
 
